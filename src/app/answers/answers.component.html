@@ -1,0 +1,20 @@
+
+<div class="wrap">
+  <ol>
+    <li matTooltip="I used third-party library to detect device">
+      <div (dblclick)="changeColor($event)">
+        if desktop - double click will change background on red
+      </div>
+    </li>
+    <li  matTooltip="For this task it is necessary to create stateless component  in which the data will be stored service">
+      <mat-form-field>
+        <input matInput type="text" (change)="saveInput($event)" value={{dataService.inputValue}}>
+      </mat-form-field>
+      <button mat-raised-button [routerLink]="['/another']" color="primary">another component</button>
+    </li>
+    <li  matTooltip="All data is stored in the service, when updated, data puts to the service and synchronized">
+      <app-binding title="First component"></app-binding>
+      <app-binding title="Second component"></app-binding>
+    </li>
+  </ol>
+</div>

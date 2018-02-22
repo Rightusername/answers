@@ -1,0 +1,6 @@
+<mat-card class="wrap">
+  <h4>{{title}}</h4>
+  <mat-form-field class="full-width">
+    <input  matInput type="text" value={{dataService.componentValue}} (input)="saveData($event)">
+  </mat-form-field>
+</mat-card>
