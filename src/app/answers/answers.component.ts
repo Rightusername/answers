@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Ng2DeviceService } from 'ng2-device-detector';
 import { DataService } from '../data.service';
 import { RouterLink } from '@angular/router';
-import { BindingComponent } from "../binding/binding.component";
+import { BindingComponent } from '../binding/binding.component';
 
 @Component({
   selector: 'app-answers',
@@ -16,12 +16,15 @@ export class AnswersComponent implements OnInit {
   ngOnInit() {
   }
 
-  changeColor(e){
-    if (this.deviceService.getDeviceInfo().os == "windows" || this.deviceService.getDeviceInfo().os == "linux" || this.deviceService.getDeviceInfo().os == "mac")
-      e.target.style.background = "red";
+  changeColor(e) {
+    if ( this.deviceService.getDeviceInfo().os === 'windows' ||
+      this.deviceService.getDeviceInfo().os === 'linux' ||
+      this.deviceService.getDeviceInfo().os === 'mac' ) {
+      e.target.style.background = 'red';
+    }
   }
 
-  saveInput(e){
+  saveInput(e) {
     this.dataService.inputValue = e.target.value;
   }
 
