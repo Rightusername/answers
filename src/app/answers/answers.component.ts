@@ -3,6 +3,7 @@ import { Ng2DeviceService } from 'ng2-device-detector';
 import { DataService } from '../data.service';
 import { RouterLink } from '@angular/router';
 import { BindingComponent } from '../binding/binding.component';
+import { ParentComponent } from '../parent/parent.component';
 
 @Component({
   selector: 'app-answers',

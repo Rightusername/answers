@@ -6,7 +6,8 @@
         if desktop - double click will change background on red
       </div>
     </li>
-    <li  matTooltip="For this task it is necessary to create stateless component  in which the data will be stored service">
+    <li  matTooltip="For this task it is necessary to create stateless component  in which the data will be stored by service. Also we
+    can store data by Local-starage">
       <mat-form-field>
         <input matInput type="text" (change)="saveInput($event)" value={{dataService.inputValue}}>
       </mat-form-field>
@@ -15,6 +16,9 @@
     <li  matTooltip="All data is stored in the service, when updated, data puts to the service and synchronized">
       <app-binding title="First component"></app-binding>
       <app-binding title="Second component"></app-binding>
+    </li>
+    <li>
+      <app-parent></app-parent>
     </li>
   </ol>
 </div>

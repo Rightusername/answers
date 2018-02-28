@@ -11,17 +11,21 @@ import { Ng2DeviceDetectorModule } from 'ng2-device-detector';
 import { DataService } from './data.service';
 import { AnotherComponent } from './another/another.component';
 import { BindingComponent } from './binding/binding.component';
-import { MatInputModule } from '@angular/material/input'
+import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AnswersComponent,
     AnotherComponent,
-    BindingComponent
+    BindingComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +37,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatButtonModule,
     MatTooltipModule
   ],
+  entryComponents: [ChildComponent],
   providers: [ DataService ],
   bootstrap: [AppComponent]
 })
